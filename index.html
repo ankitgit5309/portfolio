@@ -1,0 +1,648 @@
+<!-- Source: https://youtu.be/oFnIe-RpkE4?si=PC3nBfVOMPsD6bc2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ankit - Developer Portfolio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(2, 2, 54);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            align-items: center;
+        }
+
+        nav {
+            display: Flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 3, 15);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: antiquewhite;
+            margin: 0 23px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(71, 71, 80);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: white;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /*flex-grow: flex;*/
+            margin: 110px 0;
+        }
+
+        .rightSection {
+            width: 50%;
+            font-size: 2.5rem;
+            margin: 70px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            width: 50%;
+            font-size: 2.5rem;
+            margin: 70px 0;
+
+        }
+
+        .leftSection .buttons {
+            padding: 23px;
+
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 10px 0;
+
+        }
+
+        .purple {
+            color: rgb(158, 87, 225);
+        }
+
+        #element {
+            color: rgb(158, 87, 225);
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                /* Stack nav links vertically */
+                text-align: center;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+
+            .rightSection img {
+                width: 100%;
+                /* Full width image on mobile */
+            }
+
+            .firstSection {
+                margin: 50px 0;
+                /* Adjust spacing */
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 75vw;
+            height: 1px;
+            margin: 56px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+        }
+
+        .secondSection .vertical {
+            height: 95px;
+            width: 1px;
+            background-color: white;
+            margin-top: -25px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -1px;
+        }
+
+
+        .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .vertical-title {
+            font-weight: bold;
+            margin-bottom: -66px;
+            top: 75px;
+            width: 150px;
+        }
+
+
+
+        .Vertical-desc {
+
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .work-item .vertical {
+            background-color: rgb(158, 87, 225) display
+        }
+
+        footer {
+            background-color: rgb(45, 15, 45);
+        }
+
+        .footer {
+            display: flex;
+            margin: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 125px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        footer .footer-third {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            /* This will make the text white */
+        }
+
+        ul li a:hover {
+            color: #a6a6a6;
+            /* Optional: Change hover color if you want */
+        }
+
+        .thirdSection {
+            /*background:#10103a;*/
+            margin-left: 84px;
+            /*Moves the content of third section to match the left margin*/
+            margin-top: -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .thick-line {
+            border: 0;
+            /* Remove default border */
+            height: 1.4px;
+            /* Increase the thickness of the line */
+            background-color: white;
+            /* Color of the line */
+            margin: 60px 80px;
+            /* Adjust spacing around the line */
+            width: 90%;
+            /* Adjust the width of the line */
+        }
+
+        .rightSection {
+            align-self: flex-start;
+            margin: 0;
+            padding-top: 0;
+        }
+
+        .leftsection {
+            width: 50%;
+            font-size: 2.5rem;
+            margin: 70px 0;
+
+        }
+
+        .description {
+            font: 18px;
+            line-height: 1.6;
+            margin-top: -194px;
+            padding-top: -20px;
+            margin-left: -465px;
+        }
+
+        .leftSection img {
+            width: 350px;
+            height: auto;
+            margin: 10px 0;
+            margin-left: 50;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+            text-decoration: underline;
+            margin: auto;
+            margin-right: 50;
+            margin-left: 100px;
+            padding: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ankit's Portfolio </div>
+            <new></new>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Ankit</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="tom.png" alt="Ankit's image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray"> What i Have Done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="work-item">
+                    <img class="image-top" src="html.png" width="100%">
+                    <div class="vertical"></div>
+                    <div class="vertical-title">
+                        HTML Developer (2018-2019)
+                    </div>
+                    <div class="Vertical-desc">
+                        He sat across from her trying to imagine it was the first time. It wasn't. Had it been a
+                        hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until
+                        he caught himself and again tried to imagine it was the first time.
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="" icon-controller></div>
+                    <img class="image-top" src="developer.png" width="100%">
+                    <div class="vertical"></div>
+                    <div class="vertical-title">
+                        HTML Developer (2018-2019)
+                    </div>
+                    <div class="Vertical-desc">
+                        He sat across from her trying to imagine it was the first time. It wasn't. Had it been a
+                        hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until
+                        he caught himself and again tried to imagine it was the first time.
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img class="image-top" src="developer.png" width="100%">
+                    <div class="vertical"></div>
+                    <div class="vertical-title">
+                        HTML Developer (2018-2019)
+                    </div>
+                    <div class="Vertical-desc">
+                        He sat across from her trying to imagine it was the first time. It wasn't. Had it been a
+                        hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until
+                        he caught himself and again tried to imagine it was the first time.
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img class="image-top" src="developer.png" width="100%">
+                    <div class="vertical"></div>
+                    <div class="vertical-title">
+                        HTML Developer (2018-2019)
+                    </div>
+                    <div class="Vertical-desc">
+                        He sat across from her trying to imagine it was the first time. It wasn't. Had it been a
+                        hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until
+                        he caught himself and again tried to imagine it was the first time.
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img class="image-top" src="photo.jpg" width="100%">
+                    <div class="vertical"></div>
+                    <div class="vertical-title">
+                        HTML Developer (2018-2019)
+                    </div>
+                    <div class="Vertical-desc">
+                        He sat across from her trying to imagine it was the first time. It wasn't. Had it been a
+                        hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until
+                        he caught himself and again tried to imagine it was the first time.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thirdSection">
+            <div class="leftSection">
+                <img src="jerry.png" alt="Ankit's image">
+            </div>
+            <div class="rightSection">
+                <h1> About Me </h1>
+            </div>
+            <div class="description">
+                <p><strong>Name:</strong> Ankit Raj</p>
+                <p><strong>Age:</strong> 21</p>
+                <p><strong>Conatct:</strong> ankitraj5309@gmail.com</p>
+                <p><strong>Profession:</strong> Web Developer</p>
+                <p><strong>Description:</strong> I am a passionate web developer with a love for creating dynamic and
+                    interactive web pages. I enjoy coding, learning new technologies, and improving my skills.</p>
+            </div>
+
+        </section>
+        <hr class="thick-line"> <!--Defining a divider line between the third and fourt section-->
+        <section class="skills-section">
+            <div class="skills-grid">
+                <!-- First icon and progress bar -->
+                <div class="skill-item">
+                    <img src="c.png" class="icon" alt="C logo">
+                    <progress value="90" max="100"></progress>
+                </div>
+                <!-- Second icon and progress bar -->
+                <div class="skill-item">
+                    <img src="cpp.png" class="icon" alt="C++ logo">
+                    <progress value="50" max="100"></progress>
+                </div>
+                <!-- Third icon and progress bar -->
+                <div class="skill-item">
+                    <img src="python.png" class="icon" alt="Python logo">
+                    <progress value="70" max="100"></progress>
+                </div>
+                <!-- Fourth icon and progress bar -->
+                <div class="skill-item">
+                    <img src="css.png" class="icon" alt="css logo">
+                    <progress value="60" max="100"></progress>
+                </div>
+                <!-- Fifth icon and progress bar -->
+                <div class="skill-item">
+                    <img src="html.png" class="icon" alt="HTML logo">
+                    <progress value="85" max="100"></progress>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <style>
+            /* Basic layout for the section */
+            .skills-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 10vh;
+                background-color: #0a0b27;
+                /* Adjust background color to match */
+            }
+
+            /* Grid layout for the icons and progress bars */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                /* 3 items per row */
+                gap: 40px;
+                /* Space between the items */
+                max-width: 80%;
+                /* Adjust width based on the available space */
+            }
+
+            /* Styling for each skill item */
+            .skill-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Icon styling */
+            .icon {
+                display: block;
+                width: 80px;
+                /* Uniform size for all icons */
+                height: 80px;
+                /* Set a fixed height to avoid misalignment */
+                object-fit: contain;
+                /* Ensures the aspect ratio is maintained */
+                margin: 0 auto 10px;
+                /* Centers the icon and adds space between the icon and the progress bar */
+            }
+
+            /* Progress bar styling */
+            progress {
+                width: 150px;
+                /* Adjust width of progress bar */
+                height: 12px;
+                border-radius: 10px;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            progress::-webkit-progress-bar {
+                background-color: #e6e6e6;
+                border-radius: 10px;
+            }
+
+            progress::-webkit-progress-value {
+                background-color: #007bff;
+                /* Progress bar color */
+                border-radius: 10px;
+            }
+        </style>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Project 1: Portfolio Website</h3>
+                    <p>A personal portfolio website to showcase my skills and projects. Built using HTML, CSS, and
+                        JavaScript.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank">GitHub Repo</a> |
+                    <a href="https://your-portfolio-link.com" target="_blank">Live Demo</a>
+                </div>
+                <div class="project">
+                    <h3>Project 2: IoT Smart Home System</h3>
+                    <p>An IoT-based home automation system that allows users to control devices remotely. Developed
+                        during my internship.</p>
+                    <p><strong>Technologies:</strong> Python, Arduino, IoT</p>
+                    <a href="https://github.com/yourusername/smart-home" target="_blank">GitHub Repo</a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <style>
+            #projects {
+                padding: 40px;
+                background-color: #f4f4f4;
+            }
+
+            #projects h2 {
+                text-align: center;
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            .project-list {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .project {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .project h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .project p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            .project a {
+                color: #0073e6;
+                text-decoration: none;
+            }
+
+            .project a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Ankit's developer portfolilo</h3>
+            </div>
+            <div class="footer-second"></div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+            </ul>
+            <div class="footer-third"></div>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/ankit-pandey-092b07244/">LinkedIn</a></li>
+                <li><a href="https://github.com/ankitgit5309">GitHub</a></li>
+                <li><a href="https://x.com/AnkitPa62616687">Twitter</a></li>
+                <li><a href="https://www.instagram.com/hrishab_22/">Instagram</a></li>
+            </ul>
+            <div class="footer-fourth"></div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+            </ul>
+
+        </div>
+        <div class="footer-rights">
+            www.ankitsportfolio.com | All rights reserved©.
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Graphic Designer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
