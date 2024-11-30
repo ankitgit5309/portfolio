@@ -19,6 +19,11 @@
         })();
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -283,44 +288,70 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Ankit's Portfolio </div>
-            <new></new>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Skills</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is <span class="purple">Ankit</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
-                <div class="buttons">
-                    <button class="btn">Download Resume</button>
-                    <script>
-                        function downloadResume() {
-                            window.location.href = 'path/to/your/resume.pdf'; // Replace with the actual path to your resume file
-                        }
-                    </script>
-                    <button class="btn">Visit Github</button>
+    <section id="home">
+        <!-- Home content -->
+        <header>
+            <nav>
+                <div class="left">Ankit's Portfolio </div>
+                <new></new>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Skills">Skills</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
                 </div>
-                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-                <span id="element"></span>
-            </div>
-            <div class="rightSection">
-                <img src="tom.png" alt="Ankit's image">
-            </div>
-        </section>
-        <hr>
+            </nav>
+            <style>
+                nav {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background-color: #000;
+                    /* Adjust color to your preference */
+                    z-index: 1000;
+                    /* Ensures it stays above other elements */
+                    padding: 10px 20px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    /* Optional: Add a shadow for better visibility */
+                }
+
+                body {
+                    margin: 0;
+                    padding-top: 60px;
+                    /* Adjust this value to the height of your navbar */
+                }
+            </style>
+        </header>
+        <main>
+            <section class="firstSection">
+                <div class="leftSection">
+                    Hi, My name is <span class="purple">Ankit</span>
+                    <div>and I am a passionate</div>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <button class="btn">Download Resume</button>
+                        <script>
+                            function downloadResume() {
+                                window.location.href = 'path/to/your/resume.pdf'; // Replace with the actual path to your resume file
+                            }
+                        </script>
+                        <button class="btn">Visit Github</button>
+                    </div>
+                    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                    <span id="element"></span>
+                </div>
+                <div class="rightSection">
+                    <img src="tom.png" alt="Ankit's image">
+                </div>
+            </section>
+    </section>
+    <hr>
+
+    <section id="about">
+        <!-- About content -->
         <section class="secondSection">
             <span class="text-gray"> What i Have Done so far</span>
             <h1>Work Experience</h1>
@@ -545,6 +576,10 @@
                 margin-left: 50;
             }
         </style>
+    </section>
+
+    <section id="about">
+        <!-- Skills content -->
         <section class="thirdSection">
             <div class="leftSection">
                 <img src="jerry.png" alt="Ankit's image">
@@ -654,8 +689,11 @@
                 }
             }
         </style>
+    </section>
+    <hr class="thick-line"> <!--Defining a divider line between the third and fourt section-->
 
-        <hr class="thick-line"> <!--Defining a divider line between the third and fourt section-->
+    <section id="Skills">
+        <!-- Projects content -->
         <section class="skills-section">
             <h2>Skills : </h2>
             <div class="skills-grid">
@@ -817,6 +855,10 @@
                 }
             }
         </style>
+    </section>
+
+    <section id="Projects">
+        <!-- Contact content -->
         <section id="projects">
             <h2>My Projects</h2>
             <div class="project-list">
@@ -940,58 +982,58 @@
                 }
             }
         </style>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mkgnjqjk" method="POST">
+            <label>
+                Your email:
+                <input type="your email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/mkgnjqjk" method="POST">
-                <label>
-                    Your email:
-                    <input type="your email" name="email">
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
-                </label>
-                <!-- your other form fields go here -->
-                <button type="submit">Send</button>
-            </form>
+        <p id="response-message"></p>
+    </section>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
 
-            <p id="response-message"></p>
-        </section>
-        <style>
-            form {
-                display: flex;
-                flex-direction: column;
-                max-width: 400px;
-                margin: auto;
-            }
+        label {
+            margin-top: 10px;
+        }
 
-            label {
-                margin-top: 10px;
-            }
+        input,
+        textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-            input,
-            textarea {
-                padding: 10px;
-                margin-top: 5px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-            button {
-                margin-top: 15px;
-                padding: 10px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            button:hover {
-                background-color: #45a049;
-            }
-        </style>
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 
     </main>
     <footer>
@@ -1001,10 +1043,7 @@
             </div>
             <div class="footer-second"></div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
+               
             </ul>
             <div class="footer-third"></div>
             <ul>
@@ -1015,10 +1054,11 @@
             </ul>
             <div class="footer-fourth"></div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
 
         </div>
